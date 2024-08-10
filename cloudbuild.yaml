@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    # gen-lang-client-0406445494
+    args: ["build", "-t", "gcr.io/gen-lang-client-0406445494/kubeflow", "."]
+  - name: 'gcr.io/cloud-builders/docker'
+    # gen-lang-client-0406445494
+    args: ["push", "gcr.io/gen-lang-client-0406445494/kubeflow"]
