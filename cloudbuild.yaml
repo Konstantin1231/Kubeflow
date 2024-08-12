@@ -6,9 +6,12 @@ steps:
     #    --region=europe-west9 --config \
     #    cloudbuild.yaml
 
-    # Configure docker to have nessesary permissions: gcloud auth configure-docker europe-west9-docker.pkg.dev
+    # Configure docker to have nessesary permissions: gcloud auth configure-docker us-central1-docker.pkg.dev
+    # Or: gcloud auth configure-docker
+    # it should be done locally and on the VM, where the build is running. The command runs only once.
 
-    # ssh into the VM: gcloud compute ssh instance-20240810-091553 --zone us-central1-f
+    # ssh into the VM: gcloud compute ssh konstantin_medyanikov@instance-20240810-091553 --zone us-central1-f
+    # gcloud compute ssh [USERNAME]@[INSTANCE_NAME] --zone [ZONE]
     args: ["build", "-t", "us-central1-docker.pkg.dev/gen-lang-client-0406445494/kubeflow/kubeflow", "."]
   - name: 'gcr.io/cloud-builders/docker'
     # gen-lang-client-0406445494

@@ -11,4 +11,4 @@ COPY src /opt/program/src
 
 EXPOSE 8000
 
-ENTRYPOINT [ "uvicorn", "src.app:app", "--host", "localhost", "--port", "8000" ]
+ENTRYPOINT [ "uvicorn", "src.main:app", "--host", "localhost", "--port", "8000" ]
