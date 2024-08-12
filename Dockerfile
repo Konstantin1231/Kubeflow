@@ -11,4 +11,4 @@ COPY src /opt/program/src
 
 EXPOSE 8000
 
-ENTRYPOINT [ "uvicorn", "src.main.kubeflow_proj:app", "--host", "localhost", "--port", "8000" ]
+ENTRYPOINT [ "uvicorn", "src.kubeflow_proj.main:app", "--host", "localhost", "--port", "8000" ]
